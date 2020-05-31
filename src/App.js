@@ -36,7 +36,7 @@ const Container = styled.div`
 const exampleInput = `
 billing-engine > order-placed
 order-tracking-service > order-placed, order-updates
-customer-registered > customer-worker
+customer-worker > customer-registered
 `
 
 function App() {

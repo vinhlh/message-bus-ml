@@ -15,7 +15,7 @@ Example:
 ```
 billing-engine > order-placed
 order-tracking-service > order-placed, order-updates
-customer-registered > customer-worker
+customer-worker > customer-registered
 ```
 
 ## Demo
