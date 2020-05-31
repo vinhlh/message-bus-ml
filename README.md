@@ -10,6 +10,14 @@ queueD > topicE
 queueF > topicC
 ```
 
+Example:
+
+```
+billing-engine > order-placed
+order-tracking-service > order-placed, order-updates
+customer-registered > customer-worker
+```
+
 ## Demo
 
 [Demo](https://vinhlh.github.io/message-bus-ml/)
