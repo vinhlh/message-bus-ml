@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3d0fbe88b39616754564ed38fc229644",
+    "revision": "9a8a658f56399592e5bb0e75f92ce587",
     "url": "/message-bus-ml/index.html"
   },
   {
