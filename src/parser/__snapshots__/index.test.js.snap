@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse parses correctly without any error 1`] = `
+Object {
+  "input": "",
+  "output": Array [
+    Object {
+      "data": Object {
+        "class": "sns",
+        "id": "SNS",
+      },
+    },
+    Object {
+      "data": Object {
+        "class": "ses",
+        "id": "SES",
+      },
+    },
+  ],
+}
+`;
+
+exports[`parse parses correctly without any error 2`] = `
+
+" "
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 3`] = `
+
+"a "
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 4`] = `
+
+"a >"
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 5`] = `
+
+"a > b"
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "a",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "b",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to b",
+      "source": "b",
+      "target": "a",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 6`] = `
+
+"a > b, "
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "a",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "b",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to b",
+      "source": "b",
+      "target": "a",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 7`] = `
+
+"a > b, c"
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "a",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "b",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "c",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to b",
+      "source": "b",
+      "target": "a",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to c",
+      "source": "c",
+      "target": "a",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 8`] = `
+
+"a > b, c
+d > "
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "a",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "b",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "c",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to b",
+      "source": "b",
+      "target": "a",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to c",
+      "source": "c",
+      "target": "a",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 9`] = `
+
+"a > b, c
+d > e"
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "a",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "d",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "b",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "c",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "e",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to b",
+      "source": "b",
+      "target": "a",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "a to c",
+      "source": "c",
+      "target": "a",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "d to e",
+      "source": "e",
+      "target": "d",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 10`] = `
+
+"
+
+
+      something-between-random-empty-lines
+
+d > e
+
+"
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "d",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "e",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "d to e",
+      "source": "e",
+      "target": "d",
+    },
+  },
+]
+`;
+
+exports[`parse parses correctly without any error 11`] = `
+
+"billing-engine > order-placed
+order-tracking-service > order-placed, order-updates
+customer-worker > customer-registered
+"
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Array [
+  Object {
+    "data": Object {
+      "class": "sns",
+      "id": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "ses",
+      "id": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "billing-engine",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "order-tracking-service",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "queue",
+      "id": "customer-worker",
+      "parent": "SES",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "order-placed",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "order-placed",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "order-updates",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "class": "topic",
+      "id": "customer-registered",
+      "parent": "SNS",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "billing-engine to order-placed",
+      "source": "order-placed",
+      "target": "billing-engine",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "order-tracking-service to order-placed",
+      "source": "order-placed",
+      "target": "order-tracking-service",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "order-tracking-service to order-updates",
+      "source": "order-updates",
+      "target": "order-tracking-service",
+    },
+  },
+  Object {
+    "data": Object {
+      "id": "customer-worker to customer-registered",
+      "source": "customer-registered",
+      "target": "customer-worker",
+    },
+  },
+]
+`;

@@ -38,5 +38,10 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://vinhlh.github.io/message-bus-ml"
+  "homepage": "https://vinhlh.github.io/message-bus-ml",
+  "jest": {
+    "snapshotSerializers": [
+      "./src/snapshotSerializer"
+    ]
+  }
 }
