@@ -1,6 +1,6 @@
 # Message Bus ML
 
-<img width="1389" alt="Screenshot 2020-05-31 at 11 56 10 PM" src="https://user-images.githubusercontent.com/261283/83356764-c4301d00-a39a-11ea-9cc1-b0becc400ffe.png">
+<img width="1384" alt="Screenshot 2020-06-01 at 12 53 45 AM" src="https://user-images.githubusercontent.com/261283/83357958-61db1a80-a3a2-11ea-91d4-b39fec94a949.png">
 
 ## Syntax
 
