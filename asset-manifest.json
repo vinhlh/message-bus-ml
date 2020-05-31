@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/message-bus-ml/static/js/main.8a07910f.chunk.js",
-    "main.js.map": "/message-bus-ml/static/js/main.8a07910f.chunk.js.map",
+    "main.js": "/message-bus-ml/static/js/main.0c5ca353.chunk.js",
+    "main.js.map": "/message-bus-ml/static/js/main.0c5ca353.chunk.js.map",
     "runtime-main.js": "/message-bus-ml/static/js/runtime-main.1cc01777.js",
     "runtime-main.js.map": "/message-bus-ml/static/js/runtime-main.1cc01777.js.map",
     "static/js/2.22250701.chunk.js": "/message-bus-ml/static/js/2.22250701.chunk.js",
     "static/js/2.22250701.chunk.js.map": "/message-bus-ml/static/js/2.22250701.chunk.js.map",
     "index.html": "/message-bus-ml/index.html",
-    "precache-manifest.f8fe2629ad7bd3ef3b76c3b3d44b860e.js": "/message-bus-ml/precache-manifest.f8fe2629ad7bd3ef3b76c3b3d44b860e.js",
+    "precache-manifest.de531ec015361627c2afd8b4d9700262.js": "/message-bus-ml/precache-manifest.de531ec015361627c2afd8b4d9700262.js",
     "service-worker.js": "/message-bus-ml/service-worker.js",
     "static/js/2.22250701.chunk.js.LICENSE.txt": "/message-bus-ml/static/js/2.22250701.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1cc01777.js",
     "static/js/2.22250701.chunk.js",
-    "static/js/main.8a07910f.chunk.js"
+    "static/js/main.0c5ca353.chunk.js"
   ]
 }
