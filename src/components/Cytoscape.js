@@ -30,6 +30,14 @@ const configs = {
         padding: 15,
       },
     },
+
+    {
+      selector: 'node.highlighted',
+      style: {
+        'border-width': 6,
+      },
+    },
+
     {
       selector: 'node[class="queue"]',
       style: {
@@ -45,6 +53,13 @@ const configs = {
         'target-arrow-color': '#848484',
         'target-arrow-shape': 'triangle',
         'curve-style': 'bezier',
+      },
+    },
+
+    {
+      selector: 'edge.highlighted',
+      style: {
+        width: 6,
       },
     },
 
@@ -75,7 +90,7 @@ const configs = {
         'background-color': '#c1f3d7',
       },
     },
-  ]
+  ],
 }
 
 const layoutConfigs = {
@@ -97,7 +112,6 @@ class Cytoscape extends Component {
     this.cy = cytoscape(configs)
 
     this.mapPropsToNewValues(this.props)
-
   }
 
   shouldComponentUpdate() {
@@ -111,6 +125,16 @@ class Cytoscape extends Component {
   mapPropsToNewValues(props) {
     this.cy.json({ elements: parse(props.input) })
     this.cy.makeLayout(layoutConfigs).run()
+
+    this.cy.nodes().on('click', (e) => {
+      var ele = e.target
+
+      this.cy.edges().removeClass('highlighted')
+      this.cy.nodes().removeClass('highlighted')
+
+      this.cy.nodes("[id='" + e.target.id() + "']").addClass('highlighted')
+      ele.neighborhood().addClass('highlighted')
+    })
   }
 
   componentWillUnmount() {
