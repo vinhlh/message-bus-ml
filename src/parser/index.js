@@ -12,6 +12,10 @@ const parse = (lines) => {
     }
 
     const [rawQueue, rawTopics] = line.split(TOPIC_QUEUE_SEPARATOR)
+    if (!rawTopics || rawTopics.trim() === '') {
+      return
+    }
+
     const queue = rawQueue.trim()
     queues.push({
       data: {
@@ -25,6 +29,10 @@ const parse = (lines) => {
       .split(TOPIC_SEPARATOR)
       .forEach((topic) => {
         topic = topic.trim()
+        if (topic === '') {
+          return
+        }
+
         topics.push({
           data: {
             id: topic,
