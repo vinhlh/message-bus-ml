@@ -104,6 +104,21 @@ const Container = styled.div`
   flex: 3;
 `
 
+const ExportButton = styled.button`
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+`
+
 class Cytoscape extends Component {
   cy = null
 
@@ -141,12 +156,25 @@ class Cytoscape extends Component {
     this.cy.destroy()
   }
 
-  getCy() {
-    return this.cy
+  export = () => {
+    const image = this.cy.png({
+      full: true,
+      output: 'blob',
+    })
+
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(new Blob([image], { type: 'jpeg/png' }))
+    a.download = 'exported.png'
+    a.click()
   }
 
   render() {
-    return <Container ref={(ref) => (this.ref = ref)} />
+    return (
+      <>
+        <Container ref={(ref) => (this.ref = ref)} />
+        <ExportButton onClick={this.export}>Export</ExportButton>
+      </>
+    )
   }
 }
 
